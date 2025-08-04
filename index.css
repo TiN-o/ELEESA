@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    background-image: linear-gradient(black,white);
+    position: relative;
+}
+
+nav {
+    background-color: transparent;
+    position: sticky;
+
+    ul {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 5rem;
+    }
+
+    a {
+        text-decoration: none;
+        padding: 2rem 3rem;
+        border-radius: 1rem 2rem;
+        color: white;
+        font-weight: 900;
+        transition: 0.5s;
+        font-size: 1.5rem;
+    }
+}
+
+nav a:hover {
+    -webkit-text-stroke: 3px #fff;
+    color: transparent;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav li:first-child {
+    margin-right: auto;
+}
+
+.vedio-content {
+    width: 100%;
+    min-height: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+#home {
+    .hero {
+        position: absolute;
+        top: 7rem;
+        left: 3rem;
+        display: flex;
+        gap: 0 20rem;
+    }
+
+    .hero .school,
+    .department {
+        display: flex;
+        gap: 0 3px;
+        align-items: center;
+        font-weight: bold;
+    }
+
+    .school img,
+    .department img {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    .introduction {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 10rem 0 0 0;
+
+        button {
+            margin: 10rem 0 0 0;
+            border: solid blue 2px;
+            background-color: transparent;
+            padding: 1rem 4rem;
+            color: black;
+            text-align: center;
+            border-radius: 2rem 2rem;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.3rem;
+            transition-duration: 0.4s;
+            animation: button-bounce 2.5s ease infinite;
+
+            &:hover {
+                cursor: pointer;
+                border-color: black;
+                color: blue;
+                box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.311);
+            }
+
+            &:active {
+                text-indent: 10px;
+            }
+        }
+
+    }
+
+    @keyframes button-bounce {
+
+        0%,
+        100% {
+            transform: translateY(5px);
+        }
+
+        50% {
+            transform: translateY(-5px);
+        }
+
+    }
+}
+
+#about {
+    min-height: 100%;
+    width: auto;
+}
